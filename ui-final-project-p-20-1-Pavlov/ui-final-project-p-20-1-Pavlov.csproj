@@ -72,6 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\EmployerPage\MainEmployerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginPage\MainWindowLoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +119,9 @@
     </Compile>
     <Compile Include="Model\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployerPage\MainEmployerPage.xaml.cs">
+      <DependentUpon>MainEmployerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginPage\MainWindowLoginPage.xaml.cs">
       <DependentUpon>MainWindowLoginPage.xaml</DependentUpon>
@@ -163,7 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\AdministratorPage\" />
-    <Folder Include="View\EmployerPage\" />
     <Folder Include="View\UserPage\" />
   </ItemGroup>
   <ItemGroup>
