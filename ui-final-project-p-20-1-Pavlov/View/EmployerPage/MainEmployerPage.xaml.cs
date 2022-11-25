@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ui_final_project_p_20_1_Pavlov.Core;
+using ui_final_project_p_20_1_Pavlov.View.LoginPage;
 
 namespace ui_final_project_p_20_1_Pavlov.View.EmployerPage
 {
@@ -23,6 +25,21 @@ namespace ui_final_project_p_20_1_Pavlov.View.EmployerPage
         public MainEmployerPage()
         {
             InitializeComponent();
+        }
+
+        private void BtnCheck_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new LoginEmployerPage());
+        }
+
+        private void BtnLoginEmployer_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new MainWindowLoginPage());
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

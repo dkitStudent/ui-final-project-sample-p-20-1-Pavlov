@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ui_final_project_p_20_1_Pavlov.Core;
 
 namespace ui_final_project_p_20_1_Pavlov.View.LoginPage
 {
@@ -23,6 +24,40 @@ namespace ui_final_project_p_20_1_Pavlov.View.LoginPage
         public MainWindowRegistrationPage()
         {
             InitializeComponent();
+        }
+
+        private async void BtnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(TbFullName.Text) || 
+                string.IsNullOrEmpty(TbPhone.Text) ||
+                string.IsNullOrEmpty(TbEmail.Text) ||
+                string.IsNullOrEmpty(TbSkills.Text))
+            {
+                MessageBox.Show("Все поля должны быть заполнены!", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                if (FrameNavigate.DB.Users.Count(u => u.FIO == TbFullName.Text) > 0)
+                {
+                    MessageBox.Show("Пользователь с такими инициалами уже зарегистрирован!", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                FrameNavigate.DB.Users.Add(new Model.User 
+                { 
+                    FIO = TbFullName.Text,
+                    UserPhone =  TbPhone.Text,
+                    UserMail = TbEmail.Text,
+                    UserSkills = TbSkills.Text,
+                    RoleID = 2
+                });
+                await FrameNavigate.DB.SaveChangesAsync();
+                MessageBox.Show("Учетная запись создана!", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
+                FrameNavigate.FrameObject.Navigate(new MainWindowLoginPage());
+            }
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new MainWindowLoginPage());
         }
     }
 }
