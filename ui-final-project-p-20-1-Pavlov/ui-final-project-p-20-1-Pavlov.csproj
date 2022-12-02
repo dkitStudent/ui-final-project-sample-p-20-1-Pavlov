@@ -72,6 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="UserPage\MainUserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\EmployerPage\DetailEmployerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +131,9 @@
     </Compile>
     <Compile Include="Model\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\MainUserPage.xaml.cs">
+      <DependentUpon>MainUserPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\EmployerPage\DetailEmployerPage.xaml.cs">
       <DependentUpon>DetailEmployerPage.xaml</DependentUpon>
@@ -184,7 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\AdministratorPage\" />
-    <Folder Include="View\UserPage\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
