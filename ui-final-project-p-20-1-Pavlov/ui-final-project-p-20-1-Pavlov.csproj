@@ -76,6 +76,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AdministratorPage\AdminUserControls\AdminInfoEmployerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdministratorPage\AdminUserControls\AdminInfoOrderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdministratorPage\AdminUserControls\AdminInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AdministratorPage\MainAdministratorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +151,15 @@
     <Compile Include="UserPage\MainUserPage.xaml.cs">
       <DependentUpon>MainUserPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AdministratorPage\AdminUserControls\AdminInfoEmployerControl.xaml.cs">
+      <DependentUpon>AdminInfoEmployerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdministratorPage\AdminUserControls\AdminInfoOrderControl.xaml.cs">
+      <DependentUpon>AdminInfoOrderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdministratorPage\AdminUserControls\AdminInfoUserControl.xaml.cs">
+      <DependentUpon>AdminInfoUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AdministratorPage\MainAdministratorPage.xaml.cs">
       <DependentUpon>MainAdministratorPage.xaml</DependentUpon>
     </Compile>
@@ -196,9 +217,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\AdministratorPage\AdminUserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

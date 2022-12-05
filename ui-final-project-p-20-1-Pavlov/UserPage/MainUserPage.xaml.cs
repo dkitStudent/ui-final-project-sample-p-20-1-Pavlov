@@ -25,7 +25,6 @@ namespace ui_final_project_p_20_1_Pavlov.UserPage
         public MainUserPage()
         {
             InitializeComponent();
-
             DataOrderInfo.ItemsSource = FrameNavigate.DB.OrderBoards.OrderBy(f => f.OrderBoardID).ToList();
         }
 
