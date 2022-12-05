@@ -76,6 +76,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AdministratorPage\MainAdministratorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\EmployerPage\DetailEmployerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +139,9 @@
     <Compile Include="UserPage\MainUserPage.xaml.cs">
       <DependentUpon>MainUserPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AdministratorPage\MainAdministratorPage.xaml.cs">
+      <DependentUpon>MainAdministratorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\EmployerPage\DetailEmployerPage.xaml.cs">
       <DependentUpon>DetailEmployerPage.xaml</DependentUpon>
     </Compile>
@@ -190,7 +197,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\AdministratorPage\" />
+    <Folder Include="View\AdministratorPage\AdminUserControls\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

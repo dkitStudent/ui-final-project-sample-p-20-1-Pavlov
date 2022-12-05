@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ui_final_project_p_20_1_Pavlov.Core;
+using ui_final_project_p_20_1_Pavlov.View.LoginPage;
 
 namespace ui_final_project_p_20_1_Pavlov.UserPage
 {
@@ -23,11 +25,18 @@ namespace ui_final_project_p_20_1_Pavlov.UserPage
         public MainUserPage()
         {
             InitializeComponent();
+
+            DataOrderInfo.ItemsSource = FrameNavigate.DB.OrderBoards.OrderBy(f => f.OrderBoardID).ToList();
+        }
+
+        private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new MainWindowLoginPage());
         }
 
         private void BtnOK_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Заявка отправлена на рассмотрение модерации", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
