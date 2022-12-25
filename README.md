@@ -1,1 +1,1 @@
-# ui-final-project-p-20-1-Pavlov
+# ui-final-project-sample-p-20-1-Pavlov
